@@ -3,4 +3,7 @@
     <string name="textview">Введите строку</string>
     <string name="hint">Поле для ввода</string>
     <string name="button">Ввод</string>
+    <string name="label2">Результат</string>
+    <string name="label3">Поле для вывода</string>
+    <string name="label4" />
 </resources>

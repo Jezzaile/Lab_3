@@ -1,7 +1,6 @@
 package com.example.lab_3
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -29,21 +28,23 @@ class MainActivity : AppCompatActivity() {
 
     fun onClickButton(@Suppress("UNUSED_PARAMETER")view: View){
         val inp = findViewById<TextView>(R.id.textInputEditText)
+        val ans = findViewById<TextView>(R.id.textView4)
         if(inp.text.isNullOrBlank()){
+            ans.text = "Ошибка"
             return
         }
         val st = inp.text.toString()
-        invertString(st)
+        ans.text = invertString(st)
     }
 
-    fun invertString (s:String){
+    fun invertString (s:String):String{
         val len = s.length
         var res_A:CharSequence = s.subSequence(0,len/2)
         var res_B:CharSequence = s.subSequence(len/2, len)
         res_A = res_A.reversed()
         res_B = res_B.reversed()
         val out = res_B.toString() + res_A.toString()
-        Log.d("test", out)
+        return out
 
     }
 }
