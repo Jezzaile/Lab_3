@@ -1,6 +1,9 @@
 package com.example.lab_3
 
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,4 +20,14 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
+    fun onClickButton(@Suppress("UNUSED_PARAMETER")view: View){
+        val inp = findViewById<TextView>(R.id.textInputEditText)
+        if(inp.text.isNullOrBlank()){
+            return
+        }
+        val st = inp.text.toString()
+        Log.d("test", st)
+    }
 }
+
